@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<footer th:fragment="footer" class="bg-dark text-white text-center py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <a th:href="@{/}" class="logo-font link-light text-decoration-none fs-5">
+                    <img src="/images/logo.png" alt="로고" class="my-3">
+                    이젠 인테리어
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium illo animi sapiente sit
+                    error officia!</p>
+            </div>
+
+            <div class="col-md-4">
+                <h5 class="fw-bold my-3">About Us</h5>
+                <ul class="list-unstyled">
+                    <li><a th:href="@{/profile}" class="link-light text-decoration-none">프로필</a></li>
+                    <li><a th:href="@{/private-interior}" class="link-light text-decoration-none">프라이빗 인테리어</a></li>
+                    <li><a th:href="@{/business-interior}" class="link-light text-decoration-none">비즈니스 인테리어</a></li>
+                    <li><a th:href="@{/contact}" class="link-light text-decoration-none">연락처</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h5 class="fw-bold my-3">소셜 미디어</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="link-light text-decoration-none">유튜브</a></li>
+                    <li><a href="#" class="link-light text-decoration-none">블로그</a></li>
+                    <li><a href="#" class="link-light text-decoration-none">인스타그램</a></li>
+                    <li><a href="#" class="link-light text-decoration-none">페이스북</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="my-3"><i class="bi bi-c-circle"></i> ALL RIGHT RESERVED BY <span class="logo-font text-info">이젠
+                인테리어</span></p>
+    </div>
+</footer>
+</body>
+</html>

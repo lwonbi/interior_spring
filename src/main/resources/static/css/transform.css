@@ -1,0 +1,30 @@
+div{
+	width: 100px;
+	height: 100px;
+	background-color: yellow;
+	border:1px solid black;
+	text-align:center;
+	margin-left:30px;
+    transition: transform 1s, background-color 1s;
+    cursor: pointer;
+}
+
+.box2:hover {
+    transform: translate(100px, 0px);
+    background-color: aqua;
+}
+
+.box3:hover {
+	background-color:orange;
+	transform : scale(1.2,1.2);
+	}
+
+.box4:hover  {
+    background-color:lightgreen;
+    transform : rotate(45deg);		
+    }
+
+.box5:hover  {
+    background-color:pink;
+    transform : skew(20deg, 20deg);
+    }

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Sunflower:wght@500;700&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+h1, h2, h3, h4, h5, .logo-font {
+    font-family: 'Sunflower', sans-serif;
+}
+
+/* Header 영역 */
+#carouselExample img {
+    filter: grayscale(90%);
+    cursor: pointer;
+}
+
+#carouselExample:hover img {
+    filter : grayscale(0%);
+}
+
+
+/* 네비게이션 영역 */
+.nav-link.active,
+.nav-link:hover {
+    color: darkblue !important;
+    font-weight: bold;
+}
+
+
+/* 포트폴리오 섹션 */
+.card-img-top {
+    transition : transform .7s;
+    cursor:pointer;
+}
+
+.card-img-top:hover {
+    transform: scale(1.1);
+}
+
+.banner {
+    background-image: url(../images/card-banner.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* contact.html  Contact 섹션 */
+.contact-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .2)), url(../images/contact-bg.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.field-error {
+    border-color: #dc3545;
+    color: #dc3545;
+}

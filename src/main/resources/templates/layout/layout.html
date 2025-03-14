@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>layout</title>
+</head>
+<body>
+<header th:if="${page} == 'home'" class="mt-5">
+    <div id="headerImageFade" class="carousel slide carousel-fade">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#headerImageFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#headerImageFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#headerImageFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#headerImageFade" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#headerImageFade" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/images/header1.jpg" class="d-block w-100" alt="header1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/images/header2.jpg" class="d-block w-100" alt="header2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/images/header3.jpg" class="d-block w-100" alt="header3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/images/header4.jpg" class="d-block w-100" alt="header4">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/images/header5.jpg" class="d-block w-100" alt="header5">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#headerImageFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#headerImageFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</header>
+<!-- 헤더 영역 끝 -->
+<!--내비게이션 바 추가-->
+<nav th:replace="~{layout/navbar :: navbar}"></nav>
+<!--기본 템플릿 안에 삽입될 내용 시작-->
+<main class="container my-5">
+    <div class="row py-3">
+        <!--프로필 바 섹션 시작-->
+        <section class="col-md-5 col-lg-3 ">
+            <div class="bg-dark text-white text-center rounded p-3 my-3">
+                <img src="/images/main-profile.jpg" alt="main_profile" class="img-fluid rounded-pill p-2">
+                <h2 class="py-3 fs-4">이젠 Kim</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt beatae dicta porro rem. Optio officiis, vel voluptatem.</p>
+                <div class="py-3 fs-4 d-flex justify-content-evenly">
+                    <a class="link-danger " href="#" target="_blank"><i class="bi bi-youtube"></i></a>
+                    <a class="link-primary " href="#" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a class="link-warning " href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+            <!--자격사항 리스트 시작-->
+            <div class="card text-center my-3 border-dark" >
+                <div class="card-header text-bg-dark rounded-top">
+                    <h5 class="fs-5 m-1">자격사항</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">자격사항1</li>
+                    <li class="list-group-item">자격사항2</li>
+                    <li class="list-group-item">자격사항3</li>
+                </ul>
+            </div>
+            <!--자격사항 리스트 끝-->
+            <!--경력사항 리스트 시작-->
+            <div class="card text-center my-3 border-dark" >
+                <div class="card-header text-bg-dark rounded-top">
+                    <h5 class="fs-5 m-1">경력사항</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <p class="text-muted m-1">2000-2022</p>
+                        <p class="fw-bold m-1">Lorem, ipsum dolor.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p class="text-muted m-1">2000-2022</p>
+                        <p class="fw-bold m-1">Lorem, ipsum dolor.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p class="text-muted m-1">2000-2022</p>
+                        <p class="fw-bold m-1">Lorem, ipsum dolor.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p class="text-muted m-1">2000-2022</p>
+                        <p class="fw-bold m-1">Lorem, ipsum dolor.</p>
+                    </li>
+                </ul>
+            </div>
+            <!--경력사항 리스트 끝-->
+        </section>
+        <!--프로필 바 섹션 끝-->
+        <th:block layout:fragment="content"></th:block>
+    </div>
+</main>
+<footer th:replace="~{layout/footer :: footer}"></footer>
+<!--부트스트랩 자바스크립트-->
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+<!--자바스크립트-->
+<th:block></th:block>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<html layout:decorate="~{layout/layout}" lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+            <!-- 포트폴리오 섹션 시작 -->
+            <section layout:fragment="content"  class="col-md-7 col-lg-9 text-center">
+              <!-- Contact 섹션 시작 -->
+                <section class="row pt-3 pb-5">
+                <div class="col-lg-9 mx-auto">
+                    <h2 class="fs-1 fw-bold pb-3">Contact</h2>
+                    <p class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum,
+                        asperiores nisi. Officia consequuntur culpa doloribus quas corporis non provident
+                        repudiandae.</p>
+
+                    <div class="contact-bg py-4 mt-3">
+                        <p class="fs-4 fw-bold text-white mb-0 logo-font">
+                            <i class="bi bi-telephone-fill me-3 me-lg-5"></i>010-000-0000
+                        </p>
+                    </div>
+                    <div class="contact-bg py-4 mt-3">
+                        <p class="fs-4 fw-bold text-white mb-0 logo-font">
+                            <i class="bi bi-envelope-open-heart me-3 me-lg-5"></i>codethem@naver.com
+                        </p>
+                    </div>
+                    <div class="contact-bg py-4 mt-3">
+                        <p class="fs-4 fw-bold text-white mb-0 logo-font">
+                            <i class="bi bi-shop me-3 me-lg-5"></i>지하철 8호선 모란역 2번 출구
+                        </p>
+                    </div>
+                </div>
+                </section>
+                <!-- Contact 섹션 끝 -->
+                <hr>
+                <!-- 문의 사항 섹션 시작 -->
+                <div class="row py-5">
+                    <div class="col-lg-9 mx-auto">
+                        <h2 class="fs-1 fw-bold pb-3">문의 사항</h2>
+                        <p class="text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                        <!-- 입력폼 -->
+                        <form action="/contact" th:Object="${contactForm}" method="post" class="text-start bg-warning p-5">
+                            <div class="mb-3">
+                                <label th:for="name" class="form-label">이름</label>
+                                <input class="form-control bg-transparent border-dark" th:errorclass="field-error" type="text" placeholder="이름" th:field="*{name}">
+                                <div class="field-error" th:errors="*{name}"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label th:for="email" class="form-label">이메일</label>
+                                <input class="form-control bg-transparent border-dark" th:errorclass="field-error" type="email" placeholder="email@abc.com" th:field="*{email}">
+                                <div class="field-error" th:errors="*{email}"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label th:for="msg" class="form-label">문의 사항</label>
+                                <textarea class="form-control bg-transparent border-dark" th:errorclass="field-error"
+                                    placeholder="문의 사항을 남겨 주세요." cols="30" rows="5" th:field="*{msg}"></textarea>
+                                <div class="field-error" th:errors="*{msg}"></div>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input type="checkbox" class="form-check-input" name="news" id="news" checked>
+                                <label for="news" class="form-check-label">이젠 인테리어 뉴스레터 받아보기</label>
+                            </div>
+                            <button class="btn btn-dark" type="submit">전송하기</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- 문의 사항 섹션 끝 -->
+                <hr>
+                <!-- 구글 맵 섹션 시작 -->
+                <section class="py-4">
+                    <h2 class="fs-1 fw-bold">오시는 길</h2>
+                    <p class="text-muted py-3">주소 : Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.186120350308!2d127.1271211763184!3d37.43270773179002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca883df7418d1%3A0x1e9926ba0f71d15c!2z7J207KCgSVTsu7Ttk6jthLDslYTsubTrjbDrr7g!5e0!3m2!1sko!2skr!4v1703482457175!5m2!1sko!2skr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </section>
+                <!-- 구글 맵 섹션 끝 -->
+            </section>
+</html>

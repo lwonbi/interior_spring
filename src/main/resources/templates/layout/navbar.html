@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>navbar</title>
+</head>
+<body>
+<nav th:fragment="navbar" class="navbar navbar-expand-md fixed-top bg-light">
+    <div class="container-fluid">
+        <a class="logo-font navbar-brand" th:href="@{/}">
+            <img src="/images/logo.png" alt="로고">
+            이젠 인테리어</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menubar"
+                aria-controls="menubar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menubar">
+            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" th:href="@{/}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/profile}">프로필</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        인테리어
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" th:href="@{/private-interior}">개인 공간</a></li>
+                        <li><a class="dropdown-item" th:href="@{/business-interior}">비즈니스 공간</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/contact}">연락처</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/contactList}">문의사항리스트</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</body>
+</html>
